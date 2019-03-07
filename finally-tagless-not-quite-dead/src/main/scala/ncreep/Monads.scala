@@ -26,8 +26,7 @@ object MonadReader {
   }
 }
 
-case class ReaderT[F[_], -R, A](provide: R => F[A]) {
-  self =>
+case class ReaderT[F[_], -R, A](provide: R => F[A]) { self =>
   def map[R1 <: R, B](f: A => B)
                      (implicit monad: Monad[F]): ReaderT[F, R1, B] = flatMap(a => ReaderT.pure(f(a)))
 
