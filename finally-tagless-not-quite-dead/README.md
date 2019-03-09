@@ -342,7 +342,9 @@ Having diagnosed the actual issue we are trying to tackle, we can now restate th
 
 I don't know what *you* should use, but I can try to state and motivate my personal preferences.
 
-With respect to dependency injection, I prefer the simplest possible approach, just passing arguments around. Namely as constructor arguments, or if you prefer, module arguments. Yes, it's a bit tedious, and manually wiring the whole thing can be annoying, but I find that avoiding magic in this area makes life simpler in the long run (if you're so inclined, you can use [MacWire](https://github.com/adamw/macwire) to avoid some of the boilerplate). Of course, for maintainability's sake, one needs some discipline to make sure that the modules we define are small, that they don't expose too many functions, and that most functions that they do expose actually use the capabilities we endow them with. In return, when programming within a module, type-inference becomes a non-issue:
+With respect to dependency injection, I prefer the simplest possible approach, just passing arguments around. Namely as constructor arguments, or if you prefer, module arguments. Yes, it's a bit tedious, and manually wiring the whole thing can be annoying, but I find that avoiding magic in this area makes life simpler in the long run (if you're so inclined, you can use [MacWire](https://github.com/adamw/macwire) to avoid some of the boilerplate). 
+
+Of course, for maintainability's sake, one needs some discipline to make sure that the modules we define are small, that they don't expose too many functions, and that most functions that they do expose actually use the capabilities we endow them with. In return, when programming within a module, type-inference becomes a non-issue:
 ```scala
 class Progarms[F[_]: Monad](console: Console[F], 
                             logging: Logging[F],
