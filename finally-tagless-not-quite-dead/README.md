@@ -376,3 +376,8 @@ Although I don't think that ZIO environment is the death of finally tagless, as 
 Where one sees death, I see the rise of new, possibly more ergonomic, way of doing dependency injection in Scala. 
 
 And since ergonomics are so high up the priority list for the ZIO developers, I think that quite possibly, ZIO can serve as a good gateway drug into the world of pure functional programming. Whether or not the drugs will escalate till final tagless is up for debate.
+
+### Discussion
+
+- [r/scala thread](https://www.reddit.com/r/scala/comments/ayhz0s/finally_tagless_not_quite_dead_yet/)
+- [r/hascalator thread](https://www.reddit.com/r/hascalator/comments/ayhz79/finally_tagless_not_quite_dead_yet/)
