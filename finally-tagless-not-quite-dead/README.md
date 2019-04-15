@@ -74,7 +74,7 @@ Whether or not you accept using implicits in such a way, and even if you accept 
 
 Since we are using implicits to gain access to the capabilities that we require, there's no way for the compiler to actually infer the type signatures of the code that we are writing. We must explicitly write out the implicits for the compiler to be happy.
 
-To make the problem more concrete, I'll use the example that John's uses in his post. Given that we have the following console capability:
+To make the problem more concrete, I'll use the example that John uses in his post. Given that we have the following console capability:
 ```scala
 trait Console[F[_]] {
   def putStrLn(line: String): F[Unit]
